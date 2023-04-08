@@ -14,7 +14,7 @@ export default function Home() {
         <ul>
           {data.map((acc) => {
             return (
-              <li>
+              <li key={acc.id}>
                 <Link>
                   <Card
                     props={{

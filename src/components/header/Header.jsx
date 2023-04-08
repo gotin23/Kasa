@@ -12,10 +12,20 @@ export default function Header() {
       <div className="navigation">
         <nav>
           <ul>
-            <NavLink exact to="/" className="nav-link" activeClassName="active">
+            <NavLink
+              to="/"
+              className={({ isActive }) => {
+                return isActive ? "nav-link active-link" : "nav-link";
+              }}
+            >
               Accueil
             </NavLink>
-            <NavLink exact to="/a-propos" className="nav-link" activeClassName="active">
+            <NavLink
+              to="/a-propos"
+              className={({ isActive }) => {
+                return isActive ? "nav-link active-link" : "nav-link";
+              }}
+            >
               A Propos
             </NavLink>
           </ul>

@@ -33,7 +33,7 @@ nav {
 nav ul a:nth-child(1) {
     margin-right: 48px;
 }
-.active {
+.active-link {
     text-decoration: underline;
   }
 
@@ -46,13 +46,14 @@ nav ul a:nth-child(1) {
         width: 120px;
     }
     .nav-link {
-        color: #FF6060;
-        text-decoration: none;
-        font-weight: 500;
+       
         font-size: 12px;
-        cursor: pointer;
+    
     }
     nav ul a:nth-child(1) {
         margin-right: 10px;
     }
+    .active-link {
+        text-decoration: underline;
+      }
             }
