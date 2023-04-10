@@ -1,0 +1,48 @@
+.rate-container {
+   display: flex;
+   width: 100%;
+   flex-direction: column;
+
+margin-bottom: 10px;
+}
+.host{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+   
+    
+}
+.host p{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    /* max-width: 30%; */
+    
+
+ 
+
+font-weight: 500;
+font-size: 18px;
+
+
+
+color: #FF6060;
+ 
+
+}
+.host-picture img{
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    margin-left:10px;
+
+}
+.rating{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 27px;
+}
+.rating img{
+    width: 24px;
+    margin-left: 15px;
+}

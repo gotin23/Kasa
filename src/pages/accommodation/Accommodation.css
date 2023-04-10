@@ -1,6 +1,58 @@
 .accomodation-container{
     margin-top: 20px; 
-  background-color: aqua;
     padding: 0px 68px; 
    
  }
+ .collapses-container{
+  
+   width: 100%;
+  min-height: 350px;
+   display: flex;
+   justify-content: space-between;
+ }
+ .collapse-description{
+   width: 47%;
+
+ 
+ }
+ .collapse-equipment{
+   width: 47%;
+ 
+
+
+ }
+ .rate-and-title-container{
+  display: flex;
+  margin-top:30px;
+  margin-bottom: 37px;
+ }
+ .title-accomodation-tags-container h2{
+  
+
+font-weight: 500;
+font-size: 36px;
+
+
+color: #FF6060;
+
+ }
+ .title-accomodation-tags-container p{
+
+  font-weight: 500;
+  font-size: 18px;
+
+  
+  color: #FF6060;
+ }
+ .title-accomodation-tags-container{
+
+width: 85%;
+ }
+ @media screen and (max-width: 950px) {
+    .accomodation-container{
+        margin-top: 20px; 
+     
+        padding: 0px 20px; 
+       
+     }
+            }

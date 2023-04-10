@@ -1,0 +1,79 @@
+.collapse-title{
+    background: #FF6060;
+    border-radius: 10px;
+    height: 52px; 
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.collapse-title h3{
+    font-weight: 500;
+    font-size: 18px;
+    color:  #ffffff;
+}
+.collapse-content{
+    background: #F7F7F7;
+border-radius: 0px 0px 0px 10px;
+
+width: 100%;
+
+
+padding: 40px 20px;
+
+}
+.collapse-content li{
+    font-weight: 400;
+    font-size: 18px;
+    font-family: 'Montserrat';
+font-style: normal;
+list-style-type: none;
+ 
+    
+    
+    
+    color: #FF6060;
+    margin-bottom: 10px;
+
+}
+.collapse-anim-in{
+
+transform-origin: top;
+    animation: collapseAnimIn 0.4s ease-in-out; 
+}
+.collapse-anim-out{
+    transform-origin: bottom;
+    animation: collapseAnimIn 0.4s both; 
+}
+@keyframes collapseAnimIn {
+from{
+        transform: scaleY(0);
+    }
+    to{
+        transform: scaleY(1);
+
+    
+}}
+@keyframes collapseAnimOut {
+from{
+        transform: scaleY(1);
+    }
+    to{
+        transform: scaleY(0);
+
+    
+}}
+.collapse-content p{
+    font-weight: 400;
+    font-size: 18px;
+
+color: #FF6060;
+}
+.arrows-collapse{
+position: absolute;
+top: 50%;
+right: 0%;
+transform: translate(-50%, -50%);
+cursor: pointer;
+}

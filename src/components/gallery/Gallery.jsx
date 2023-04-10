@@ -22,7 +22,6 @@ export default function Gallery({ state }) {
       console.log("fin");
       return setActiveSlide(0);
     } else {
-      console.log("decrementeur");
       setActiveSlide(activeSlide + value);
     }
   };
