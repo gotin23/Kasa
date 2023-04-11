@@ -5,6 +5,7 @@ import data from "../../data/logements.json";
 import Gallery from "../../components/gallery/Gallery";
 import Collapse from "../../components/collapse/Collapse";
 import Rate from "../../components/rate/Rate";
+import Tag from "../../components/tag/Tag";
 
 export default function Accommodation(props) {
   const location = useLocation();
@@ -20,6 +21,11 @@ export default function Accommodation(props) {
         <div className="title-accomodation-tags-container">
           <h2>{accommodation[0].title}</h2>
           <p>{accommodation[0].location}</p>
+          <div className="tags-container">
+            {accommodation[0].tags.map((tag) => (
+              <Tag state={tag} />
+            ))}
+          </div>
         </div>
         <div className="rate-star-host-container">
           <Rate state={{ rate: accommodation[0].rating, hostName: accommodation[0].host.name, pic: accommodation[0].host.picture }} />

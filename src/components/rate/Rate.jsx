@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/img-redundant-alt */
 import React from "react";
 import "./Rate.css";
 import colorStar from "../../assets/icons/star-color.svg";
@@ -5,11 +6,14 @@ import greyStar from "../../assets/icons/star-grey.svg";
 
 export default function Rate({ state }) {
   console.log(state);
+  const hostName = state.hostName.split(" ");
   return (
     <div className="rate-container">
       <div className="host">
-        <p>{state.hostName}</p>
-
+        <p>
+          {hostName[0]}
+          <br /> {hostName[1]}
+        </p>
         <div className="host-picture">
           <img src={state.pic} alt="photo de profil" />
         </div>

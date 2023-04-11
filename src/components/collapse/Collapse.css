@@ -1,3 +1,7 @@
+.collapse{
+    margin-top: 30px;
+   
+}
 .collapse-title{
     background: #FF6060;
     border-radius: 10px;
@@ -6,18 +10,22 @@
     position: relative;
     display: flex;
     align-items: center;
+   
 }
 
 .collapse-title h3{
     font-weight: 500;
     font-size: 18px;
     color:  #ffffff;
+    margin-left: 18px;
 }
 .collapse-content{
     background: #F7F7F7;
 border-radius: 0px 0px 0px 10px;
 
 width: 100%;
+overflow: auto;
+overflow-y: scroll;
 
 
 padding: 40px 20px;
@@ -77,3 +85,32 @@ right: 0%;
 transform: translate(-50%, -50%);
 cursor: pointer;
 }
+@media screen and (max-width: 950px) {
+ .collapse{
+    margin-top: 20px;
+ }
+ .collapse-title{
+    height: 30px;
+ }
+ .collapse-title h3{
+    font-weight: 500;
+    font-size: 13px;
+   
+    margin-left: 12px;
+}
+.arrows-collapse{
+    width: 16px;
+    }
+    .collapse-content p{
+     font-size: 12px;
+    }
+    .collapse-content {
+     padding: 20px 30px;
+    }
+    .collapse-content li{
+        font-weight: 400;
+        font-size: 12px;
+        margin-bottom: 5px;
+
+    }    
+                }

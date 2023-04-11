@@ -16,6 +16,7 @@ margin-bottom: 10px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    text-align: right;
     /* max-width: 30%; */
     
 
@@ -46,3 +47,26 @@ color: #FF6060;
     width: 24px;
     margin-left: 15px;
 }
+@media screen and (max-width: 950px) {
+.rate-container{
+    flex-direction: row-reverse;
+    margin-top: 18px;
+    margin-bottom: 0;
+}
+.host p{
+    font-size: 12px;
+}
+.host-picture img{
+    width: 32px;
+    height: 32px;
+ 
+
+}
+.rating{
+    margin: 0;
+}
+.rating img{
+    width: 13px;
+    margin-left: 7px;
+}
+            }

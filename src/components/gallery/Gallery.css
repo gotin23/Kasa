@@ -28,6 +28,11 @@
 
 }
 @media screen and (max-width: 950px) {
+    .right-arrow, .left-arrow{
+    
+        width: 12px;
+      
+    }
    .gallery-accomodation{
     height: 255px;
    }

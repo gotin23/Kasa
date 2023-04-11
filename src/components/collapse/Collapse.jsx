@@ -11,10 +11,10 @@ export default function Collapse({ state }) {
   };
 
   return (
-    <>
+    <div className="collapse">
       <div className="collapse-title">
         <img src={!toggleCollapse ? ArrowDown : ArrowTop} className="arrows-collapse" alt="fleche vers le bas" onClick={handleToggleCollapse} />
-        <h3>{state.title}</h3>
+        <h3>{state.cat !== undefined ? state.cat : state.title}</h3>
       </div>
       {toggleCollapse && (
         <div className="collapse-content collapse-anim-in">
@@ -29,6 +29,6 @@ export default function Collapse({ state }) {
           )}
         </div>
       )}
-    </>
+    </div>
   );
 }

@@ -24,7 +24,7 @@
  .rate-and-title-container{
   display: flex;
   margin-top:30px;
-  margin-bottom: 37px;
+
  }
  .title-accomodation-tags-container h2{
   
@@ -40,6 +40,7 @@ color: #FF6060;
 
   font-weight: 500;
   font-size: 18px;
+  margin-top: 5px;
 
   
   color: #FF6060;
@@ -48,6 +49,10 @@ color: #FF6060;
 
 width: 85%;
  }
+ .tags-container{
+  margin-top: 22px;
+  display: flex;
+ }
  @media screen and (max-width: 950px) {
     .accomodation-container{
         margin-top: 20px; 
@@ -55,4 +60,45 @@ width: 85%;
         padding: 0px 20px; 
        
      }
+     .rate-and-title-container{
+     flex-direction: column;
+    
+     }
+     .tags-container{
+      flex-wrap: wrap;
+      margin-top: 0px;
+      width: 100%;
+    
+     }
+    
+     .title-accomodation-tags-container h2{
+
+      font-weight: 500;
+      font-size: 18px;
+      
+      
+       }
+    
+     .title-accomodation-tags-container {
+
+   width: 100%;
+      
+      
+       }
+       .title-accomodation-tags-container p{
+        font-size: 14px;
+     
+       }
+       .collapses-container{
+        flex-direction: column;
+        min-height: auto;
+        margin-bottom: 50px;
+        
+       }
+       .collapse-description{
+        width: 100%;
+       }
+       .collapse-equipment{
+        width: 100%;
+       }
             }
