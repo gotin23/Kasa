@@ -9,7 +9,7 @@ import "./Router.css";
 export default function Router() {
   return (
     <div style={{ margin: "auto 0" }}>
-      <Routes>
+      <Routes basename={process.env.PUBLIC_URL}>
         <Route path="/" element={<Home />} />
         <Route path="/logement/:id" element={<Accommodation />} />
         <Route path="/a-propos" element={<About />} />
