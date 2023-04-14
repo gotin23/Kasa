@@ -15,7 +15,7 @@ export default function Home() {
           {data.map((acc) => {
             return (
               <li key={acc.id}>
-                <Link to={{ pathname: `/logement/${acc.title}` }}>
+                <Link to={{ pathname: `/logement/${acc.id}` }}>
                   <Card
                     props={{
                       url: acc.cover,

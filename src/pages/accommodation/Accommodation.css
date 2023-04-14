@@ -1,104 +1,105 @@
-.accomodation-container{
-    margin-top: 20px; 
-    padding: 0px 68px; 
-   
- }
- .collapses-container{
-  
-   width: 100%;
+.accomodation-container {
+  margin-top: 20px;
+  padding: 0px 68px;
+}
+
+.collapses-container {
+
+  width: 100%;
   min-height: 350px;
-   display: flex;
-   justify-content: space-between;
- }
- .collapse-description{
-   width: 47%;
-
- 
- }
- .collapse-equipment{
-   width: 47%;
- 
-
-
- }
- .rate-and-title-container{
   display: flex;
-  margin-top:30px;
+  justify-content: space-between;
+}
 
- }
- .title-accomodation-tags-container h2{
-  
+.collapse-description {
+  width: 47%;
+}
 
-font-weight: 500;
-font-size: 36px;
+.collapse-equipment {
+  width: 47%;
+}
 
+.rate-and-title-container {
+  display: flex;
+  margin-top: 30px;
+}
 
-color: #FF6060;
+.title-accomodation-tags-container h2 {
+  font-weight: 500;
+  font-size: 36px;
+  color: #FF6060;
+}
 
- }
- .title-accomodation-tags-container p{
-
+.title-accomodation-tags-container p {
   font-weight: 500;
   font-size: 18px;
   margin-top: 5px;
-
-  
   color: #FF6060;
- }
- .title-accomodation-tags-container{
+}
 
-width: 85%;
- }
- .tags-container{
+.title-accomodation-tags-container {
+
+  width: 85%;
+}
+
+.tags-container {
   margin-top: 22px;
   display: flex;
- }
- @media screen and (max-width: 950px) {
-    .accomodation-container{
-        margin-top: 20px; 
-     
-        padding: 0px 20px; 
-       
-     }
-     .rate-and-title-container{
-     flex-direction: column;
-    
-     }
-     .tags-container{
-      flex-wrap: wrap;
-      margin-top: 0px;
-      width: 100%;
-    
-     }
-    
-     .title-accomodation-tags-container h2{
+}
 
-      font-weight: 500;
-      font-size: 18px;
-      
-      
-       }
-    
-     .title-accomodation-tags-container {
+@media screen and (max-width: 950px) {
+  .accomodation-container {
+    margin-top: 15px;
 
-   width: 100%;
-      
-      
-       }
-       .title-accomodation-tags-container p{
-        font-size: 14px;
-     
-       }
-       .collapses-container{
-        flex-direction: column;
-        min-height: auto;
-        margin-bottom: 50px;
-        
-       }
-       .collapse-description{
-        width: 100%;
-       }
-       .collapse-equipment{
-        width: 100%;
-       }
-            }
+    padding: 0px 20px;
+
+  }
+
+  .rate-and-title-container {
+    flex-direction: column;
+    margin-top: 15px;
+
+  }
+
+  .tags-container {
+    flex-wrap: wrap;
+    margin-top: 0px;
+    width: 100%;
+
+  }
+
+  .title-accomodation-tags-container h2 {
+
+    font-weight: 500;
+    font-size: 18px;
+
+
+  }
+
+  .title-accomodation-tags-container {
+
+    width: 100%;
+
+
+  }
+
+  .title-accomodation-tags-container p {
+    font-size: 14px;
+
+  }
+
+  .collapses-container {
+    flex-direction: column;
+    min-height: auto;
+    margin-bottom: 50px;
+
+  }
+
+  .collapse-description {
+    width: 100%;
+  }
+
+  .collapse-equipment {
+    width: 100%;
+  }
+}

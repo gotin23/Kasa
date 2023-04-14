@@ -6,39 +6,44 @@ import Gallery from "../../components/gallery/Gallery";
 import Collapse from "../../components/collapse/Collapse";
 import Rate from "../../components/rate/Rate";
 import Tag from "../../components/tag/Tag";
+import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 export default function Accommodation(props) {
   const location = useLocation();
-  // const name = location.pathname.replace("/logement/", "").replace(/%20/g, " ");
-  const name = decodeURIComponent(location.pathname).replace("/logement/", "");
-  const accommodation = data.filter((obj) => obj.title === name);
-  // name.replace("%", "");
-  console.log(accommodation);
+  const navigate = useNavigate();
+  const id = location.pathname.replace("/logement/", "");
+  useEffect(() => {
+    const objectWithId = data.find((obj) => obj.id === id);
+    !objectWithId && navigate("/*");
+
+    // if (objectWithId) {
+    //   // L'objet avec l'ID recherché a été trouvé
+    //   // Effectuer une action ici, par exemple :
+    //   console.log(`L'objet avec l'ID ${id} a été trouvé :`, objectWithId);
+    // } else {
+    //   navigate("/error");
+    // }
+  }, []);
+
+  const accommodation = data.filter((obj) => obj.id === id);
+
   return (
     <div className="accomodation-container">
-      <Gallery state={{ pics: accommodation[0].pictures, alt: accommodation[0].title }} />
+      {accommodation[0] && <Gallery state={{ pics: accommodation[0].pictures, alt: accommodation[0].title }} />}
       <div className="rate-and-title-container">
         <div className="title-accomodation-tags-container">
-          <h2>{accommodation[0].title}</h2>
-          <p>{accommodation[0].location}</p>
-          <div className="tags-container">
-            {accommodation[0].tags.map((tag) => (
-              <Tag state={tag} />
-            ))}
-          </div>
+          {accommodation[0] && <h2>{accommodation[0].title}</h2>}
+          {accommodation[0] && <p>{accommodation[0].location}</p>}
+          <div className="tags-container">{accommodation[0] && accommodation[0].tags.map((tag, index) => <Tag state={tag} key={index} />)}</div>
         </div>
         <div className="rate-star-host-container">
-          <Rate state={{ rate: accommodation[0].rating, hostName: accommodation[0].host.name, pic: accommodation[0].host.picture }} />
+          {accommodation[0] && <Rate state={{ rate: accommodation[0].rating, hostName: accommodation[0].host.name, pic: accommodation[0].host.picture }} />}
         </div>
       </div>
-
       <div className="collapses-container">
-        <div className="collapse-description">
-          <Collapse state={{ title: "Description", description: accommodation[0].description }} />
-        </div>
-        <div className="collapse-equipment">
-          <Collapse state={{ title: "Equipments", equipments: accommodation[0].equipments }} />
-        </div>
+        <div className="collapse-description">{accommodation[0] && <Collapse state={{ title: "Description", description: accommodation[0].description }} />}</div>
+        <div className="collapse-equipment">{accommodation[0] && <Collapse state={{ title: "Equipments", equipments: accommodation[0].equipments }} />}</div>
       </div>
     </div>
   );
