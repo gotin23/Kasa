@@ -8,7 +8,7 @@ export default function Banner({ props }) {
   return (
     <div className="home-banner" style={location.pathname === "/a-propos" ? { height: "211px" } : {}}>
       <img src={props} alt="banner kasa" />
-      {location.pathname === "/" && (
+      {(location.pathname === "/" || location.pathname === "/Kasa") && (
         <h1>
           Chez vous,
           <span className="line-break">

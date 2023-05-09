@@ -1,13 +1,13 @@
 import React from "react";
 import "./Accommodation.css";
 import { useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 import data from "../../data/logements.json";
 import Gallery from "../../components/gallery/Gallery";
 import Collapse from "../../components/collapse/Collapse";
 import Rate from "../../components/rate/Rate";
 import Tag from "../../components/tag/Tag";
-import { useNavigate } from "react-router-dom";
-import { useEffect } from "react";
 
 export default function Accommodation(props) {
   const location = useLocation();
@@ -16,14 +16,7 @@ export default function Accommodation(props) {
   useEffect(() => {
     const objectWithId = data.find((obj) => obj.id === id);
     !objectWithId && navigate("/*");
-
-    // if (objectWithId) {
-    //   // L'objet avec l'ID recherché a été trouvé
-    //   // Effectuer une action ici, par exemple :
-    //   console.log(`L'objet avec l'ID ${id} a été trouvé :`, objectWithId);
-    // } else {
-    //   navigate("/error");
-    // }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const accommodation = data.filter((obj) => obj.id === id);
