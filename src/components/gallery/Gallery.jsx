@@ -24,9 +24,9 @@ export default function Gallery({ state }) {
   return (
     <div className="gallery-accomodation">
       <img src={state.pics[activeSlide]} alt={"photo de " + state.alt} className="active-pic" />
-      <img src={LeftArrow} alt="fleche gauche" className="left-arrow" onClick={(e) => changeSlide(-1, e)} />
-      <img src={RightArrow} alt="fleche droite" className="right-arrow" onClick={(e) => changeSlide(1, e)} />
-      <p className="">{state.pics.length > 1 && activeSlide + 1 + "/" + state.pics.length}</p>
+      {state.pics.length > 1 && <img src={LeftArrow} alt="fleche gauche" className="left-arrow" onClick={(e) => changeSlide(-1, e)} />}
+      {state.pics.length > 1 && <img src={RightArrow} alt="fleche droite" className="right-arrow" onClick={(e) => changeSlide(1, e)} />}
+      {state.pics.length > 1 && <p>{activeSlide + 1 + "/" + state.pics.length}</p>}
     </div>
   );
 }
