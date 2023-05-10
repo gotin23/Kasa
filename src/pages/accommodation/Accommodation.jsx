@@ -9,9 +9,10 @@ import Collapse from "../../components/collapse/Collapse";
 import Rate from "../../components/rate/Rate";
 import Tag from "../../components/tag/Tag";
 
-export default function Accommodation(props) {
+export default function Accommodation() {
   const location = useLocation();
   const navigate = useNavigate();
+
   const id = location.pathname.replace("/logement/", "");
   useEffect(() => {
     const objectWithId = data.find((obj) => obj.id === id);

@@ -5,7 +5,6 @@ import LeftArrow from "../../assets/icons/left-arrow.svg";
 import RightArrow from "../../assets/icons/right-arrow.svg";
 
 export default function Gallery({ state }) {
-  console.log(state.pics[0]);
   const [activeSlide, setActiveSlide] = useState(0);
   const changeSlide = (value, e) => {
     const nbSlide = state.pics.length;

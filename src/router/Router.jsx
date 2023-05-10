@@ -4,7 +4,6 @@ import About from "../pages/about/About";
 import Accommodation from "../pages/accommodation/Accommodation";
 import Error from "../pages/error/Error";
 import { Routes, Route } from "react-router-dom";
-import "./Router.css";
 
 export default function Router() {
   return (

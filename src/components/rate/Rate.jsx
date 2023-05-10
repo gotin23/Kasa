@@ -5,7 +5,6 @@ import colorStar from "../../assets/icons/star-color.svg";
 import greyStar from "../../assets/icons/star-grey.svg";
 
 export default function Rate({ state }) {
-  console.log(state);
   const hostName = state.hostName.split(" ");
   return (
     <div className="rate-container">
