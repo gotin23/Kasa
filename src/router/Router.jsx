@@ -8,7 +8,7 @@ import { Routes, Route } from "react-router-dom";
 export default function Router() {
   return (
     <div style={{ margin: "auto 0" }}>
-      <Routes basename={process.env.PUBLIC_URL}>
+      <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Kasa" element={<Home />} />
         <Route path="/logement/:id" element={<Accommodation />} />

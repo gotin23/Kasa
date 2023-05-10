@@ -1,8 +1,6 @@
 .home-container{
    margin-top: 68px; 
-
-   padding: 0px 68px; 
-  
+   padding: 0px 68px;  
 }
 .home-card-container{
   margin-top: 48px;
@@ -17,7 +15,6 @@
   list-style-type: none;
   display: flex;
   justify-content: space-around;
-
   flex-wrap: wrap;
 }
 .home-card-container ul li{
